@@ -8,6 +8,5 @@ const whoAmI = (name, age) => {
   console.log(`I was born in ${yob}`);
 }
 
-
 whoAmI("Antoine", 28);
 whoAmI("Jeff", 30);
