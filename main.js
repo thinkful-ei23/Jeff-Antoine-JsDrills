@@ -11,19 +11,22 @@ const whoAmI = (name, age) => {
     const yob = yearOfBirth(age)
     if(name === undefined || age === undefined) {
       console.error("Arguments not valid");
+    } else if (typeof age !== 'number' || typeof name !== 'string') {
+      console.error("Name is not a number or name is not a string");
     } else {
+
     console.log(`Hi, my name is ${name} and Im ${age} years old`);
     console.log(`I was born in ${yob}`);
   }
   } catch(e) {
       console.error(e.message);
   }
-
 };
 
-whoAmI("Antoine", 28);
+
+whoAmI(true, 28);
 whoAmI("Jeff", 30);
-whoAmI("Jeff", -1);
+whoAmI("Jeff", "30");
 
 
 
