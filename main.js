@@ -1,5 +1,8 @@
-function whoAmI() {
-console.log('Hi, my name is Antoine and Im 28 years old');
+// Refactored to function expression
+// Added some parameters to be passed in the function
+const whoAmI = (name, age) => {
+  // Refactored code to use string interpolation
+console.log(`Hi, my name is ${name} and Im ${age} years old`);
 }
 
-whoAmI();
+whoAmI("Antoine", 28);
