@@ -17,12 +17,35 @@ function decode(word) {
 }
 decode('craft block argon meter bells brown croon droop');
 
-function howManydays(month){
-  switch (month) {
-    case 2 : return 28;
-    case 4: case 6: case 9: case 11: return 30;
-    default: return 31;
-  }
+
+function daysInMonth(month, leapYear) {
+  switch(month) {
+
+    case January:
+    case March:
+    case May:
+    case July:
+    case August:
+    case October:
+    case December:
+      numberOfDays = 31;
+      break;
+    case February:
+      numberOfDays = determineLeapYear();
+      break;
+    default:
+      numberOfDays = 30;
+}
+return month + "has " + numberOfDays + ' days';
 }
 
-howManydays(9);
+function determineLeapYear() {
+  let year = parseInt(); 
+	
+	if((year % 4 == 0 && year % 100 !=0)  || (year % 400==0)) {
+	  return 29;
+	}
+  else {
+     return 28;
+  }
+}
