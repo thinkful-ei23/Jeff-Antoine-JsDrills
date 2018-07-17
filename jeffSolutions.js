@@ -36,7 +36,7 @@ function daysInMonth(month, leapYear) {
     default:
       numberOfDays = 30;
 }
-return month + "has " + numberOfDays + ' days';
+return month + "has " + numberOfDays + " days";
 }
 
 function determineLeapYear() {
